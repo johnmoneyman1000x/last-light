@@ -1,0 +1,17 @@
+{
+  "name": "last-light",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build:dew": "vite build --mode dew"
+  },
+  "dependencies": {
+    "three": "0.185.1"
+  },
+  "devDependencies": {
+    "dewdrop-sdk": "^0.4.0",
+    "dewctl": "^0.5.2",
+    "vite": "^8"
+  }
+}

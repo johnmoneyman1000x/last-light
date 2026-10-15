@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "game": "last-light",
+  "bundle": "dist",
+  "build": [
+    "npm",
+    "run",
+    "build:dew"
+  ]
+}

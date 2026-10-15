@@ -1,0 +1,11 @@
+import assert from 'node:assert/strict';
+import {sphereHit,boxHit} from '../src/combat.js';
+const origin={x:0,y:1.3,z:0},forward={x:0,y:0,z:-1};
+assert.equal(sphereHit(origin,forward,10,{x:0,y:1.3,z:-5},.6),4.4);
+assert.equal(sphereHit(origin,forward,10,{x:2,y:1.3,z:-5},.6),null);
+assert.equal(sphereHit(origin,forward,10,{x:0,y:1.3,z:5},.6),null);
+assert.equal(sphereHit(origin,forward,1,{x:0,y:1.3,z:-.3},.6),0);
+assert.equal(boxHit(origin,forward,10,{x:2,y:0,z:-6},{x:4,y:2,z:-2}),null);
+assert.equal(boxHit(origin,forward,10,{x:-1,y:0,z:-6},{x:1,y:2,z:-2}),2);
+assert.equal(Math.ceil(40/22),2);assert.equal(Math.ceil(150/22),7);
+console.log('Swept enemy collision, close-range hits, misses, and car obstruction checks passed.');
